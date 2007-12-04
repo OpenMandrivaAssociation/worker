@@ -1,5 +1,5 @@
 %define name worker
-%define version 2.15.0
+%define version 2.16.1
 %define release %mkrel 1
 %define docver 2.10.0.2
 
