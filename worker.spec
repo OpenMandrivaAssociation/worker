@@ -16,7 +16,7 @@ License: GPL
 Group: File tools
 BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.boomerangsworld.de/worker
-BuildRequires: XFree86-devel
+BuildRequires: X11-devel
 
 %description
 Worker is a graphical filemanager for the X Window System.
