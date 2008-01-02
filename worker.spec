@@ -14,6 +14,7 @@ Source4: %{name}-32.png
 Source5: %{name}-16.png
 License: GPL
 Group: File tools
+BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.boomerangsworld.de/worker
 BuildRequires: X11-devel
 
