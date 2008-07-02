@@ -1,5 +1,5 @@
 %define name worker
-%define version 2.16.2
+%define version 2.16.4
 %define release %mkrel 1
 %define docver 2.10.0.2
 
@@ -12,7 +12,7 @@ Source1: worker-%docver-doc.tar.bz2
 Source3: %{name}-48.png
 Source4: %{name}-32.png
 Source5: %{name}-16.png
-License: GPL
+License: GPLv2+
 Group: File tools
 BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.boomerangsworld.de/worker
