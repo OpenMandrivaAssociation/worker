@@ -1,6 +1,6 @@
 %define name worker
-%define version 2.17.2
-%define release %mkrel 2
+%define version 2.17.5
+%define release %mkrel 1
 %define docver 2.10.0.2
 
 Summary: A file manager for X in AMIGA style
@@ -12,7 +12,6 @@ Source1: worker-%docver-doc.tar.bz2
 Source3: %{name}-48.png
 Source4: %{name}-32.png
 Source5: %{name}-16.png
-Patch: worker-2.17.2-missing-header.patch
 License: GPLv2+
 Group: File tools
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -29,7 +28,6 @@ to filetypes or buttons with the builtin configuration program.
 %prep
 rm -rf $RPM_BUILD_ROOT
 %setup -q -a 1
-%patch -p1
 
 %build
 %configure2_5x
