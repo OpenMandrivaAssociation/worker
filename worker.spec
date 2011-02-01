@@ -1,5 +1,5 @@
 %define name worker
-%define version 2.17.8
+%define version 2.17.10
 %define release %mkrel 1
 %define docver 2.10.0.2
 
@@ -37,20 +37,6 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
-[Desktop Entry]
-Name=Worker
-Comment=A file manager, similar to Directory Opus on the AMIGA
-Exec=%name
-Icon=%{name}
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=X-MandrivaLinux-System-FileTools;System;FileManager;
-EOF
-
-
 mkdir -p $RPM_BUILD_ROOT{%{_iconsdir},%{_miconsdir},%{_liconsdir}}
 install -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 install -m 644 %{SOURCE4} $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
@@ -74,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README NEWS AUTHORS ChangeLog
 %doc %name-%docver-doc/*
 %{_bindir}/*
-%_datadir/applications/mandriva*
+%_datadir/applications/*.desktop
 %{_datadir}/worker/
 %{_mandir}/man1/worker.1*
 %{_miconsdir}/%{name}.png
