@@ -1,6 +1,6 @@
 %define name worker
 %define version 2.17.10
-%define release %mkrel 1
+%define release %mkrel 2
 %define docver 2.10.0.2
 
 Summary: A file manager for X in AMIGA style
@@ -16,7 +16,8 @@ License: GPLv2+
 Group: File tools
 BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.boomerangsworld.de/worker
-BuildRequires: X11-devel
+BuildRequires: libx11-devel
+BuildRequires: magic-devel
 
 %description
 Worker is a graphical filemanager for the X Window System.
@@ -26,16 +27,21 @@ used for operate on the selected items. You can easily add actions
 to filetypes or buttons with the builtin configuration program.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
 %setup -q -a 1
 
 %build
 %configure2_5x
 %make
 
+pushd %name-%docver-doc
+%configure2_5x
+%make
+popd
+
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
+%makeinstall_std -C %name-%docver-doc
 
 mkdir -p $RPM_BUILD_ROOT{%{_iconsdir},%{_miconsdir},%{_liconsdir}}
 install -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
@@ -58,11 +64,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc README NEWS AUTHORS ChangeLog
-%doc %name-%docver-doc/*
 %{_bindir}/*
 %_datadir/applications/*.desktop
-%{_datadir}/worker/
+%{_datadir}/worker
 %{_mandir}/man1/worker.1*
+%lang(fr) %{_mandir}/fr/man1/worker.1.*
+%lang(it) %{_mandir}/it/man1/worker.1.*
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
