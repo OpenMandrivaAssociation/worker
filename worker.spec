@@ -1,6 +1,6 @@
 %define name worker
-%define version 2.17.10
-%define release %mkrel 3
+%define version 2.17.12
+%define release %mkrel 1
 %define docver 2.10.0.2
 
 Summary: A file manager for X in AMIGA style
