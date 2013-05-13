@@ -16,7 +16,7 @@ License: GPLv2+
 Group: File tools
 BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.boomerangsworld.de/worker
-BuildRequires: libx11-devel
+BuildRequires: pkgconfig(x11)
 BuildRequires: magic-devel
 
 %description
