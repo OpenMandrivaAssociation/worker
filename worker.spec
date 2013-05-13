@@ -1,6 +1,6 @@
 %define name worker
 %define version 2.19.1
-%define release %mkrel 1
+%define release  2
 %define docver 2.10.0.2
 
 Summary: A file manager for X in AMIGA style
@@ -14,7 +14,6 @@ Source4: %{name}-32.png
 Source5: %{name}-16.png
 License: GPLv2+
 Group: File tools
-BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.boomerangsworld.de/worker
 BuildRequires: pkgconfig(x11)
 BuildRequires: magic-devel
