@@ -1,3 +1,8 @@
+removed_sources:
+  worker-2.19.1.tar.bz2: 51cd31fd7fa7e2808cad2eed5792b667cb76c53b
 sources:
-  "worker-2.10.0.2-doc.tar.bz2": 540b86b6847bb6788cff34747bda82437b371cf1
-  "worker-2.19.1.tar.bz2": 51cd31fd7fa7e2808cad2eed5792b667cb76c53b
+  worker-16.png: 167847e96c4285a79a60765f5528533168f80b72
+  worker-2.10.0.2-doc.tar.bz2: 540b86b6847bb6788cff34747bda82437b371cf1
+  worker-3.1.0.tar.bz2: 87b8d951782fab90c1f9e1b3ba61d073db0b9e16
+  worker-32.png: d02a6050fb8756c10d6a070b5926c768d92a8584
+  worker-48.png: a03ff9025bdaaa0fbcb5886b8d1edcd62119c639
