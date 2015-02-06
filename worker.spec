@@ -3,7 +3,7 @@
 Summary: A file manager for X in AMIGA style
 Name:    worker
 Version: 3.1.0
-Release: 1
+Release: 2
 Source0: http://www.boomerangsworld.de/cms/worker/downloads/%{name}-%{version}.tar.bz2
 Source1: worker-%{docver}-doc.tar.bz2
 Source3: %{name}-48.png
