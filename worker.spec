@@ -11,7 +11,7 @@ Source4: %{name}-32.png
 Source5: %{name}-16.png
 License: GPLv2+
 Group: File tools
-URL: http://www.boomerangsworld.de/worker
+URL: https://www.boomerangsworld.de/worker
 BuildRequires: pkgconfig(x11)
 BuildRequires: magic-devel
 
