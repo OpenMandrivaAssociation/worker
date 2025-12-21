@@ -12,6 +12,11 @@ Source5: %{name}-16.png
 License: GPLv2+
 Group: File tools
 URL: https://www.boomerangsworld.de/worker
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(x11)
 BuildRequires: magic-devel
 
